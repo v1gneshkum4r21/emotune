@@ -1,81 +1,91 @@
-,Name,Album,Artist
-0,Leave The Door Open,Leave The Door Open,Bruno Mars
-1,Dynamite,Dynamite (DayTime Version),BTS
-2,Levitating (feat. DaBaby),Future Nostalgia,Dua Lipa
-3,Kiss Me More (feat. SZA),Kiss Me More (feat. SZA),Doja Cat
-4,Perfect,÷ (Deluxe),Ed Sheeran
-5,GIRL LIKE ME,GIRL LIKE ME,Black Eyed Peas
-6,We Need Love - Cabu Remix,We Need Love (Cabu Remix),Cabu
-7,Dance Monkey,Dance Monkey,Tones And I
-8,Uptown Funk (feat. Bruno Mars),Uptown Special,Mark Ronson
-9,Sugar,V (Deluxe),Maroon 5
-10,Girls Like You (feat. Cardi B),Girls Like You (feat. Cardi B),Maroon 5
-11,Ice Cream (with Selena Gomez),Ice Cream (with Selena Gomez),BLACKPINK
-12,Useless,Useless,Two Friends
-13,Roar,PRISM (Deluxe),Katy Perry
-14,The Lazy Song,Doo-Wops & Hooligans,Bruno Mars
-15,Thinking out Loud,x (Deluxe Edition),Ed Sheeran
-16,damn i love the rain,damn i love the rain,Gabriella Zauna
-17,Intentions (feat. Quavo),Changes,Justin Bieber
-18,That's What I Like,24K Magic,Bruno Mars
-19,Makes Me Feel This Way,Makes Me Feel This Way,Nairobi
-20,Lean On (feat. MØ & DJ Snake),Peace Is The Mission : Extended,Major Lazer
-21,Barcelona,Barcelona,Andra
-22,Happy,Despicable Me 2 (Original Motion Picture Soundtrack),Various Artists
-23,Hymn for the Weekend,A Head Full of Dreams,Coldplay
-24,The Nights,Stories,Avicii
-25,"CAN'T STOP THE FEELING! (Original Song from DreamWorks Animation's ""TROLLS"")","CAN'T STOP THE FEELING! (Original Song from DreamWorks Animation's ""TROLLS"")",Justin Timberlake
-26,I Feel It Coming,Starboy,The Weeknd
-27,No Lie,No Lie,Sean Paul
-28,All of Me,Love In The Future (Expanded Edition),John Legend
-29,Sweet Dreams - Radio Killer Remix,Sweet Dreams (Radio Killer Remix),Andra
-30,Cheap Thrills (feat. Sean Paul),This Is Acting (Deluxe Version),Sia
-31,Don't Start Now,Future Nostalgia,Dua Lipa
-32,On The Floor,Love?,Jennifer Lopez
-33,Closer,Closer,The Chainsmokers
-34,The Real Slim Shady,The Marshall Mathers LP,Eminem
-35,2002,2002,Anne-Marie
-36,Sweater Weather,I Love You.,The Neighbourhood
-37,Better,Better,Khalid
-38,Hips Don't Lie (feat. Wyclef Jean),"Oral Fixation, Vol. 2 (Expanded Edition)",Shakira
-39,Adventure of a Lifetime,A Head Full of Dreams,Coldplay
-40,It's My Life,Crush,Bon Jovi
-41,Yummy,Yummy,Justin Bieber
-42,24K Magic,24K Magic,Bruno Mars
-43,Physical,Future Nostalgia,Dua Lipa
-44,Cover Me In Sunshine,Cover Me In Sunshine,P!nk
-45,Locked out of Heaven,Unorthodox Jukebox,Bruno Mars
-46,Stereo Hearts (feat. Adam Levine),The Papercut Chronicles II (Deluxe Edition),Gym Class Heroes
-47,Wake Me Up,True,Avicii
-48,Just the Way You Are,Doo-Wops & Hooligans,Bruno Mars
-49,"I'm the One (feat. Justin Bieber, Quavo, Chance the Rapper & Lil Wayne)",Grateful,DJ Khaled
-50,Something Just Like This,Something Just Like This,The Chainsmokers
-51,Waiting For Love,Stories,Avicii
-52,Eenie Meenie,Eenie Meenie,Sean Kingston
-53,Watermelon Sugar,Fine Line,Harry Styles
-54,Night Changes,FOUR (Deluxe),One Direction
-55,Say So,Hot Pink,Doja Cat
-56,Electric,Electric,Katy Perry
-57,Higher Power,Higher Power,Coldplay
-58,My Head & My Heart,Heaven & Hell,Ava Max
-59,Hold On,Hold On,Justin Bieber
-60,Follow You,Follow You / Cutthroat,Imagine Dragons
-61,BED,BED,Joel Corry
-62,Run,Run,OneRepublic
-63,"34+35 Remix (feat. Doja Cat, Megan Thee Stallion) - Remix",34+35 (Remix),Ariana Grande
-64,On The Ground,R,ROSÉ
-65,Floating Through Space,Floating Through Space,Sia
-66,Waves of Blue,Waves of Blue,Majid Jordan
-67,Fireworks (feat. Moss Kena & The Knocks),Fireworks (feat. Moss Kena & The Knocks),Purple Disco Machine
-68,Titans (feat. Sia & Labrinth),Music Is The Weapon (Reloaded),Major Lazer
-69,Lifestyle (feat. Adam Levine),Lifestyle (feat. Adam Levine),Jason Derulo
-70,Let’s Go Home Together,Let’s Go Home Together (Luca Schreiner Remix),Ella Henderson
-71,Dancing On Dangerous (feat. Sofía Reyes),Dancing On Dangerous (feat. Sofía Reyes),Imanbek
-72,Off My Face,Justice,Justin Bieber
-73,Girl From Rio,Girl From Rio,Anitta
-74,Treat People With Kindness,Fine Line,Harry Styles
-75,Medicine,Medicine,James Arthur
-76,Starstruck,Starstruck,Years & Years
-77,Hey Boy (feat. Burna Boy),Hey Boy (feat. Burna Boy),Sia
-78,Deserve You,Justice,Justin Bieber
-79,Higher (feat. iann dior),Higher (feat. iann dior),Clean Bandit
+,Name,Album,Artist,SpotifyURL,PreviewURL
+0,APT.,APT.,ROSÉ,https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY,
+1,Die With A Smile,Die With A Smile,Lady Gaga,https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe,
+2,Espresso,Espresso,Sabrina Carpenter,https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75,
+3,Like Me - Remix,Like Me (Remix),ppcocaine,https://open.spotify.com/track/4fjY25C4KaIX7u2JT3lIlY,
+4,Calm Down,Summer Holidays - Good Vibes,Various Artists,https://open.spotify.com/track/0l9KCOa3kHgmvP4JPmBUrT,
+5,Taste,Short n' Sweet,Sabrina Carpenter,https://open.spotify.com/track/1d7Ptw3qYcfpdLNL5REhtJ,
+6,I Had Some Help (Feat. Morgan Wallen),I Had Some Help,Post Malone,https://open.spotify.com/track/7221xIgOnuakPdLqT0F3nP,
+7,I Ain't Worried,"I Ain’t Worried (Music From The Motion Picture ""Top Gun: Maverick"")",OneRepublic,https://open.spotify.com/track/4h9wh7iOZ0GGn8QVp4RAOB,
+8,Rush,Rush,Ayra Starr,https://open.spotify.com/track/1rrqJ9QkOBYJlsZgqqwxgB,
+9,Love Again,Love Again,MIRA,https://open.spotify.com/track/4Vvy29lp15NvfeqC8PAr6U,
+10,I Don't Wanna Wait,I Don't Wanna Wait,David Guetta,https://open.spotify.com/track/331l3xABO0HMr1Kkyh2LZq,
+11,I'm Good (Blue),Silvester Party Hits 2022 / 2023,Various Artists,https://open.spotify.com/track/13NSf2YJVP9RLNBulaVART,
+12,golden hour,golden hour,JVKE,https://open.spotify.com/track/6GD1eomgaGT1Epto6Q5eAo,
+13,Nonsense,Música en todos lados,Various Artists,https://open.spotify.com/track/1nStjUzehuAN2qy9MQpBF4,
+14,Mondays,Mondays,TOESUP,https://open.spotify.com/track/6t3qtvyjdQfaFhzEF2EUZN,
+15,Juno,Short n' Sweet,Sabrina Carpenter,https://open.spotify.com/track/21B4gaTWnTkuSh77iWEXdS,
+16,"Dance The Night (From ""Barbie The Album"")",Your Top Songs,Various Artists,https://open.spotify.com/track/0QOiD5KHfvRm63iqwpute8,
+17,Overdrive (feat. Norma Jean Martine),Overdrive (feat. Norma Jean Martine),Ofenbach,https://open.spotify.com/track/0V584xEQYJ1NTIdGH7hDVg,
+18,Made You Look,Hot Summer Party Mix,Summer Hits,https://open.spotify.com/track/5jxLkBlwfgVNgUsoxIr0F0,
+19,Ring Ring,Ring Ring,MIRA,https://open.spotify.com/track/4cSp2hlUlAwgurjIqHN592,
+20,Dancing In The Flames,Dancing In The Flames,The Weeknd,https://open.spotify.com/track/7z7kvUQGwlC6iOl7vMuAr9,
+21,"yes, and?","yes, and?",Ariana Grande,https://open.spotify.com/track/7gaA3wERFkFkgivjwbSvkG,
+22,the boy is mine,eternal sunshine,Ariana Grande,https://open.spotify.com/track/0Lmbke3KNVFXtoH2mMSHCw,
+23,I Like You (A Happier Song) (with Doja Cat),Twelve Carat Toothache,Post Malone,https://open.spotify.com/track/0O6u0VJ46W86TxN9wgyqDj,
+24,When I Get Old,When I Get Old,Christopher,https://open.spotify.com/track/5f2CcxzZoW7hNs1O8NhG6y,
+25,LUNCH,HIT ME HARD AND SOFT,Billie Eilish,https://open.spotify.com/track/629DixmZGHc7ILtEntuiWE,
+26,Twilight,Twilight,Ashwin Gane,https://open.spotify.com/track/1IO3HXUkIaaxqpd5ldD7VE,
+27,For My Hand (feat. Ed Sheeran),"Love, Damini",Burna Boy,https://open.spotify.com/track/0HaRLPnr887lcQM2YQzkff,
+28,The Drum,The Drum,Alan Walker,https://open.spotify.com/track/1zOOl8f7qkjj0AmvlCfLyQ,
+29,"24/7, 365",bright orange everglow,elijah woods,https://open.spotify.com/track/7DFwy0ki0TfOfdDCr66ahT,
+30,feelslikeimfallinginlove - Single Version,feelslikeimfallinginlove,Coldplay,https://open.spotify.com/track/1YsU8rW2u8z4F0pwOBQ4Ea,
+31,Duro,Duro,MIRA,https://open.spotify.com/track/3lT8VPTKd1Jlztq6IZNIcf,
+32,Don't You Worry,Elevation,Black Eyed Peas,https://open.spotify.com/track/7yZ1lBorF0Iye0PVth8aM2,
+33,From the Islands (kompa pasión),From the Islands (kompa pasión),фрози,https://open.spotify.com/track/6a6nqomE4fMYo0ESHhKZRv,
+34,Light Switch,Light Switch,Charlie Puth,https://open.spotify.com/track/1BSMpVGWs3v5BZKnAQziAc,
+35,Nobody - from Kaiju No. 8,Nobody (from Kaiju No. 8),OneRepublic,https://open.spotify.com/track/47N81NMkB488fuOwOC3Oip,
+36,Ladida,Ladida,MIRA,https://open.spotify.com/track/545ffQzLmyqTYkUhaodJUv,
+37,TEXAS HOLD 'EM,TEXAS HOLD 'EM,Beyoncé,https://open.spotify.com/track/0Z7nGFVCLfixWctgePsRk9,
+38,First Class,First Class,Jack Harlow,https://open.spotify.com/track/1rDQ4oMwGJI7B4tovsBOxc,
+39,Bam Bam (feat. Ed Sheeran),Bam Bam (feat. Ed Sheeran),Camila Cabello,https://open.spotify.com/track/0QBzMgT7NIeoCYy3sJCof1,
+40,3D (feat. Jack Harlow),3D (feat. Jack Harlow),Jung Kook,https://open.spotify.com/track/6ehWdR7cGDXnT7aKEASJxE,
+41,Bad Booty,Bad Booty,MIRA,https://open.spotify.com/track/6YFwGUryBKKhJ7s7rZWix0,
+42,Late Night Talking,Late Night Talking,Harry Styles,https://open.spotify.com/track/5M7h24t295Z8MnyRAcjQbD,
+43,Solo,Hity na lato 2023,Various Artists,https://open.spotify.com/track/14q1VFCescxIyCAEPFc5nZ,
+44,Lil Boo Thang,Lil Boo Thang,Paul Russell,https://open.spotify.com/track/0cVyQfDyRnMJ0V3rjjdlU3,
+45,Belong Together,Belong Together,Mark Ambor,https://open.spotify.com/track/4JGtRHnWyaNq7FIOZoBdPe,
+46,Come With Me,Come With Me,MIRA,https://open.spotify.com/track/6uIu54tY9Rjwrwk47RxqK9,
+47,About Damn Time,About Damn Time,Lizzo,https://open.spotify.com/track/1PckUlxKqWQs3RlWXVBLw3,
+48,Freeze,Freeze,Kygo,https://open.spotify.com/track/4X66U6SUjvZqiKYIpCWXnq,
+49,Rock My Body,Rock My Body,R3HAB,https://open.spotify.com/track/2o97OhRvkc1WGbV20QkB0R,
+50,All 4 Nothing (I'm So In Love),All 4 Nothing (I'm So In Love),Lauv,https://open.spotify.com/track/21AziTMaZwcLflGMAj85o5,
+51,Two Feet,Two Feet,TOESUP,https://open.spotify.com/track/4l09dn8jv0EM7NzViRWPut,
+52,Bad Memories (feat. Elley Duhé & FAST BOY),Bad Memories (feat. Elley Duhé & FAST BOY),MEDUZA,https://open.spotify.com/track/3rb0tMq42WfggucPm0HHkA,
+53,KU LO SA (with Camila Cabello),KU LO SA (with Camila Cabello),Oxlade,https://open.spotify.com/track/0HihDC6qQ8MChAhjfW3gMU,
+54,Ma Bebe,Ma Bebe,Stefania,https://open.spotify.com/track/6YB4SUZCSTJuAzRY5hwApq,
+55,Do It Again,Do It Again,Ray Dalton,https://open.spotify.com/track/1IeQnQxCs2YJN6u3wQbUyX,
+56,Two Feet (DJ Dark Remix),Two Feet (DJ Dark Remix),TOESUP,https://open.spotify.com/track/1bjWJ6p09HLT0CTiJE97X4,
+57,Rush,Rush (feat. PinkPantheress & Hyunjin of Stray Kids),Troye Sivan,https://open.spotify.com/track/4gqakJ2DQ5NoTqNHxyIBAM,
+58,Before You,Pop Mania,Various Artists,https://open.spotify.com/track/3MbH4TbtxRpWwUJ9scSAGr,
+59,Single Soon,Single Soon,Selena Gomez,https://open.spotify.com/track/6iF4RgIjDvDqyW13PezSj3,
+60,On My Love,On My Love,Zara Larsson,https://open.spotify.com/track/0dxp7DyPJEo6JhtnjUtBnN,
+61,Ice Cream,Ice Cream,TOESUP,https://open.spotify.com/track/0yWR1M14e8S4cw4Ej7dS5T,
+62,LIFETIMES,LIFETIMES,Katy Perry,https://open.spotify.com/track/0K8sKuo6xLHZgySZmmw2rV,
+63,STUPID IN LOVE (feat. HUH YUNJIN of LE SSERAFIM),STUPID IN LOVE (feat. HUH YUNJIN of LE SSERAFIM),MAX,https://open.spotify.com/track/60JZB9waHUPWJTGbYO6kDB,
+64,Lonely World,Lonely World,K-391,https://open.spotify.com/track/3JO4zEi1PJwANcidci6x6e,
+65,IT'S YOU (feat. keshi),IT'S YOU (feat. keshi),MAX,https://open.spotify.com/track/5SMCxRA6hB2jEhroaYfw6N,
+66,Angels,Angels,DAWN,https://open.spotify.com/track/7de1242yAgL8WpIVevNrcN,
+67,The Alchemy,THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY,Taylor Swift,https://open.spotify.com/track/1tuNqJOtRQVHvONR8Lg3MZ,
+68,I LUV IT (feat. Playboi Carti),I LUV IT (feat. Playboi Carti),Camila Cabello,https://open.spotify.com/track/2H2ytI7ompfNmRkI2sq8Uk,
+69,Sweetest Pie,Sweetest Pie,Megan Thee Stallion,https://open.spotify.com/track/7mFj0LlWtEJaEigguaWqYh,
+70,Celestial,Celestial,Ed Sheeran,https://open.spotify.com/track/4zrKN5Sv8JS5mqnbVcsul7,
+71,Alibi,Alibi,Glitter Dream,https://open.spotify.com/track/75FQimAdlKrQushkL6aDbw,
+72,Welcome To New York (Taylor's Version),1989 (Taylor's Version),Taylor Swift,https://open.spotify.com/track/1hR8BSuEqPCCZfv93zzzz9,
+73,Kiss Me,Songs of Sonder,Dermot Kennedy,https://open.spotify.com/track/1Xq9ilOLiknCaGYtSsvFrH,
+74,Ayo Girl (Fayahh Beat) [feat. Rema],Ayo Girl (Fayahh Beat) [feat. Rema],Robinson,https://open.spotify.com/track/57Hk0AE5OhgXrPWZOhipHt,
+75,Yummy (with Dhurata Dora & Stefflon Don),Yummy (with Dhurata Dora & Stefflon Don),INNA,https://open.spotify.com/track/4UBQzePH33VgggQbnS7K0v,
+76,Shades of Blue,Shades of Blue,Féa,https://open.spotify.com/track/4OLMKKgfAeCMcYejzEp1AR,
+77,GIRLS,GIRLS,The Kid LAROI,https://open.spotify.com/track/7z3PblAN3dH1JMewiRydkZ,
+78,B.O.T.A. (Baddest of Them All),Daily Pop Mix,Various Artists,https://open.spotify.com/track/28vVY9dJdHWrxsTRix1gMF,
+79,Super Freaky Girl,Wake up happy 2023 | Good Morning,Various Artists,https://open.spotify.com/track/4XRc44oRSkuJfnYcQUSMst,
+80,Forever and Ever and Always,Forever and Ever and Always,Ryan Mack,https://open.spotify.com/track/5keXeMrCGBYXpJYQ0FFqjK,
+81,"Ring, Ring - Remix","Ring, Ring (Remix)",MIRA,https://open.spotify.com/track/6Jmv3gl8m6hp2bxgg3ex6i,
+82,Desire (with Sam Smith),Desire (with Sam Smith),Calvin Harris,https://open.spotify.com/track/22dUzMFttcR3uU17NcOAIv,
+83,Hold Me Closer,The Lockdown Sessions,Elton John,https://open.spotify.com/track/5TJEBoTCDbJXiKMdCN9pd3,
+84,Flowers Need Rain,Class Of 2022,Various Artists,https://open.spotify.com/track/5yIOiT0g7BWAa8bIVRpBKj,
+85,Satellite,Harry's House,Harry Styles,https://open.spotify.com/track/0rzaRSujxA0bKyjJl6vHYq,
+86,Undress Your Soul,Undress Your Soul,Glitter Dream,https://open.spotify.com/track/3Y7TkKyrIe8UvRZRzCkc7X,
+87,Doctor (Work It Out) [feat. Miley Cyrus],Doctor (Work It Out) [feat. Miley Cyrus],Pharrell Williams,https://open.spotify.com/track/4f9wNNZET9wH7eMBgONd3d,
+88,Lovin On Me,Lovin On Me,Jack Harlow,https://open.spotify.com/track/4xhsWYTOGcal8zt0J161CU,
+89,Give Me A Kiss,Give Me A Kiss,Crash Adams,https://open.spotify.com/track/0ocf3HwWhrXtA8r63Vcd2h,

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotune - Emotion Based Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #3b82f6;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --success-color: #22c55e;
+            --danger-color: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--background-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .emotion-section {
+            background: var(--card-background);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: #000;
+            aspect-ratio: 16/9;
+        }
+
+        #videoElement {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .emotion-display {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .music-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .recommendations {
+            background: var(--card-background);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            flex: 1;
+        }
+
+        .recommendations h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .songs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .songs-table th {
+            text-align: left;
+            padding: 1rem;
+            background: var(--background-color);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .songs-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--background-color);
+        }
+
+        .songs-table tr:hover {
+            background: var(--background-color);
+        }
+
+        .play-btn {
+            background: var(--success-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .player-section {
+            background: var(--card-background);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .player-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #spotifyPlayer {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .control-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header fade-in">
+            <h1><i class="fas fa-music"></i> Emotune</h1>
+            <p>Your emotion-powered music companion</p>
+        </header>
+
+        <div class="main-content">
+            <section class="emotion-section fade-in">
+                <h2><i class="fas fa-camera"></i> Emotion Detection</h2>
+                <div class="video-container">
+                    <img id="videoElement" src="{{ url_for('video_feed') }}" alt="Video Feed">
+                </div>
+                <div class="emotion-display" id="currentEmotion">
+                    <i class="fas fa-smile"></i> Current Emotion: Neutral
+                </div>
+                <div class="control-buttons">
+                    <button onclick="startAnalysis()" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Start Analysis
+                    </button>
+                    <button onclick="stopAnalysis()" class="btn btn-danger">
+                        <i class="fas fa-stop"></i> Stop Analysis
+                    </button>
+                </div>
+            </section>
+
+            <section class="music-section fade-in">
+                <div class="recommendations">
+                    <h2><i class="fas fa-list"></i> Recommended Songs</h2>
+                    <div id="ResultArea"></div>
+                </div>
+
+                <div class="player-section">
+                    <h2><i class="fas fa-headphones"></i> Now Playing</h2>
+                    <div id="playerArea">
+                        <iframe id="spotifyPlayer" 
+                                height="152" 
+                                frameborder="0" 
+                                allowtransparency="true" 
+                                allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        let isAnalyzing = false;
+        let currentPlayingTrack = null;
+
+        $('#startButton').click(function() {
+            startAnalysis();
+        });
+
+        $('#stopButton').click(function() {
+            stopAnalysis();
+        });
+
+        // Update recommendations and emotion only when analyzing
+        setInterval(function() {
+            if (isAnalyzing) {
+                $.getJSON('/t')
+                    .done(function(data) {
+                        console.log("Received data from server:", data);
+                        if (Array.isArray(data) && data.length > 0) {
+                            CreateHtmlTable(data);
+                        } else {
+                            console.log("No data received or empty array");
+                        }
+                    })
+                    .fail(function(jqXHR, textStatus, errorThrown) {
+                        console.error("Failed to fetch data:", textStatus, errorThrown);
+                    });
+                
+                $.getJSON('/current_emotion')
+                    .done(function(data) {
+                        console.log("Current emotion:", data);
+                        if (data.emotion) {
+                            $('#currentEmotion').text("Current Emotion: " + data.emotion);
+                        }
+                    })
+                    .fail(function(error) {
+                        console.error("Error fetching emotion:", error);
+                    });
+            }
+        }, 1000);
+
+        function CreateHtmlTable(data) {
+            const resultArea = $("#ResultArea");
+            resultArea.html("");
+
+            const table = $("<table class='recommendations-table'></table>");
+            
+            // Create header
+            const header = $("<tr></tr>");
+            ["Song", "Artist", "Album", "Action"].forEach(text => {
+                header.append($("<th></th>").text(text));
+            });
+            table.append(header);
+
+            // Create rows
+            data.forEach(value => {
+                const row = $("<tr></tr>");
+                row.append($("<td></td>").text(value.Name));
+                row.append($("<td></td>").text(value.Artist));
+                row.append($("<td></td>").text(value.Album));
+                
+                // Add play button cell
+                const playButtonCell = $("<td></td>");
+                const playButton = $("<button class='btn btn-primary btn-sm'>Play</button>");
+                
+                playButton.click(function() {
+                    playSong(value.Name, value.Artist, value.SpotifyURL);
+                });
+                
+                playButtonCell.append(playButton);
+                row.append(playButtonCell);
+                table.append(row);
+            });
+
+            resultArea.append(table);
+        }
+
+        // Add this helper function to validate Spotify URLs
+        function isValidSpotifyUrl(url) {
+            if (!url) return false;
+            try {
+                const parsed = new URL(url);
+                return parsed.hostname === 'open.spotify.com' && url.includes('/track/');
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function playSong(songName, artist, spotifyUrl) {
+            console.log("Playing song:", songName, "by", artist, "URL:", spotifyUrl);
+
+            try {
+                let embedUrl;
+                if (spotifyUrl && spotifyUrl.includes('/track/')) {
+                    // Direct track URL
+                    embedUrl = spotifyUrl.replace('open.spotify.com/', 'open.spotify.com/embed/');
+                } else {
+                    // Fallback to search
+                    const searchQuery = encodeURIComponent(`${songName} ${artist}`);
+                    embedUrl = `https://open.spotify.com/embed/search/${searchQuery}`;
+                }
+
+                console.log("Setting player URL to:", embedUrl);
+                
+                // Update the player
+                const player = document.getElementById('spotifyPlayer');
+                player.src = embedUrl;
+                
+                // Update the Now Playing section title
+                const nowPlayingTitle = document.createElement('p');
+                nowPlayingTitle.textContent = `Now Playing: ${songName} - ${artist}`;
+                const playerArea = document.getElementById('playerArea');
+                // Remove any existing title
+                const existingTitle = playerArea.querySelector('p');
+                if (existingTitle) {
+                    playerArea.removeChild(existingTitle);
+                }
+                playerArea.insertBefore(nowPlayingTitle, player);
+                
+            } catch (error) {
+                console.error("Error playing song:", error);
+                document.getElementById('playerArea').innerHTML = `
+                    <div class="alert alert-danger">
+                        Unable to play "${songName}". Please try another song.
+                    </div>
+                `;
+            }
+        }
+
+        function startAnalysis() {
+            isAnalyzing = true;
+            $.getJSON('/start_analysis')
+                .done(function(response) {
+                    console.log("Analysis started:", response);
+                })
+                .fail(function(error) {
+                    console.error("Error starting analysis:", error);
+                });
+        }
+
+        function stopAnalysis() {
+            isAnalyzing = false;
+            $.getJSON('/stop_analysis')
+                .done(function(response) {
+                    console.log("Analysis stopped:", response);
+                    // Don't clear the song list when stopping
+                    if (response.emotion) {
+                        $('#currentEmotion').text("Last Emotion: " + response.emotion);
+                    }
+                })
+                .fail(function(error) {
+                    console.error("Error stopping analysis:", error);
+                });
+        }
+
+        // Add this function to persist the last emotion's songs
+        function updateSongsForEmotion(emotion) {
+            $.getJSON('/get_songs_for_emotion/' + emotion)
+                .done(function(data) {
+                    if (Array.isArray(data) && data.length > 0) {
+                        CreateHtmlTable(data);
+                    }
+                })
+                .fail(function(error) {
+                    console.error("Error fetching songs for emotion:", error);
+                });
+        }
+    </script>
+</body>
+</html>

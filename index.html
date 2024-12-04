@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotune</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -28,13 +28,6 @@
             color: var(--text-primary);
             height: 100vh;
             display: flex;
-            flex-direction: column;
-        }
-
-        .app-container {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
         }
 
         /* Left Panel */
@@ -133,162 +126,78 @@
         /* Main Content */
         .main-content {
             flex: 1;
+            padding: 20px;
+            background: linear-gradient(to bottom, #535353, var(--background));
             overflow-y: auto;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .playlist-header {
-            display: flex;
-            padding: 32px;
-            gap: 24px;
-            align-items: flex-end;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-        }
-
-        .playlist-image {
-            width: 232px;
-            height: 232px;
-            box-shadow: 0 4px 60px rgba(0,0,0,.5);
+        .recommendation-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
         }
 
-        .playlist-info {
+        .songs-list {
+            background: var(--surface-low);
+            border-radius: 8px;
+            padding: 20px;
             flex: 1;
         }
 
-        .playlist-type {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .playlist-title {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
-
-        .playlist-description {
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .playlist-controls {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .play-all-button {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: var(--primary);
-            border: none;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .play-all-button:hover {
-            transform: scale(1.05);
-            background: #1ed760;
-        }
-
-        .play-all-button i {
-            font-size: 24px;
-        }
-
-        /* Songs Table */
         .songs-table {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 0 4px;
-            padding: 0 32px;
+            border-spacing: 0 8px;
         }
 
         .songs-table th {
             text-align: left;
-            padding: 8px;
+            padding: 12px;
             color: var(--text-secondary);
-            font-size: 12px;
-            font-weight: 500;
-            text-transform: uppercase;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .song-row {
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .song-row:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .song-row td {
-            padding: 12px 8px;
-        }
-
-        .song-info {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .song-image {
-            width: 40px;
-            height: 40px;
-            border-radius: 4px;
-            object-fit: cover;
-        }
-
-        .song-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .song-name {
-            color: var(--text-primary);
             font-weight: 500;
         }
 
-        .song-artist {
-            color: var(--text-secondary);
-            font-size: 14px;
+        .songs-table td {
+            padding: 12px;
+            background: var(--surface);
+            vertical-align: middle;
         }
 
-        .duration {
-            color: var(--text-secondary);
-            font-size: 14px;
+        .songs-table td:last-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        .songs-table tr:hover td {
+            background: #333;
+        }
+
+        .songs-table td:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        .songs-table td:last-child {
+            border-radius: 0 8px 8px 0;
         }
 
         /* Player Section */
         .player-section {
             background: var(--surface);
-            padding: 8px 16px;
-            border-top: 1px solid #333;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: auto;
         }
 
         #spotifyPlayer {
             width: 100%;
-            height: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: block;
+            border-radius: 8px;
+            background: var(--surface-low);
         }
 
         /* Update play button styles */
@@ -328,58 +237,45 @@
     </style>
 </head>
 <body>
-    <div class="app-container">
-        <div class="left-panel">
-            <div class="logo">
-                <i class="fas fa-music"></i>
-                <h1>Emotune</h1>
-            </div>
-            <div class="webcam-container">
-                <img id="videoElement" src="{{ url_for('video_feed') }}" alt="Video Feed">
-            </div>
-            <div class="control-buttons">
-                <button onclick="startAnalysis()" class="btn btn-primary">
-                    <i class="fas fa-play"></i> Start Analysis
-                </button>
-                <button onclick="stopAnalysis()" class="btn btn-danger">
-                    <i class="fas fa-stop"></i> Stop Analysis
-                </button>
-            </div>
-            <div class="emotion-status" id="currentEmotion">
-                <i class="fas fa-face-meh"></i>
-                Current Emotion: Neutral
-            </div>
+    <div class="left-panel">
+        <div class="logo">
+            <i class="fas fa-music"></i>
+            <h1>Emotune</h1>
         </div>
-
-        <div class="main-content">
-            <div class="playlist-header">
-                <img class="playlist-image" id="moodImage" src="/static/images/moods/neutral.jpg" alt="Mood Playlist">
-                <div class="playlist-info">
-                    <div class="playlist-type">MOOD PLAYLIST</div>
-                    <h1 class="playlist-title" id="moodTitle">Balanced Beats</h1>
-                    <div class="playlist-description" id="moodDescription">
-                        Songs recommended for your neutral mood
-                    </div>
-                    <div class="playlist-controls">
-                        <button class="play-all-button" onclick="playAllSongs()">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="ResultArea"></div>
+        <div class="webcam-container">
+            <img id="videoElement" src="{{ url_for('video_feed') }}" alt="Video Feed">
+        </div>
+        <div class="control-buttons">
+            <button onclick="startAnalysis()" class="btn btn-primary">
+                <i class="fas fa-play"></i> Start Analysis
+            </button>
+            <button onclick="stopAnalysis()" class="btn btn-danger">
+                <i class="fas fa-stop"></i> Stop Analysis
+            </button>
+        </div>
+        <div class="emotion-status" id="currentEmotion">
+            <i class="fas fa-face-smile"></i>
+            Current Emotion: Neutral
         </div>
     </div>
 
-    <div class="player-section">
-        <div id="playerArea">
-            <iframe id="spotifyPlayer" 
-                    frameborder="0" 
-                    allowtransparency="true" 
-                    allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
-                    loading="lazy">
-            </iframe>
+    <div class="main-content">
+        <div class="recommendation-title">
+            Recommended Songs Based on Your Emotion
+        </div>
+        <div class="songs-list">
+            <div id="ResultArea"></div>
+        </div>
+        <div class="player-section">
+            <div id="playerArea">
+                <iframe id="spotifyPlayer" 
+                        height="152" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
+                        loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
 
@@ -417,7 +313,6 @@
                         console.log("Current emotion:", data);
                         if (data.emotion) {
                             $('#currentEmotion').text("Current Emotion: " + data.emotion);
-                            updateMoodUI(data.emotion);
                         }
                     })
                     .fail(function(error) {
@@ -434,82 +329,46 @@
             
             // Create header
             const header = $("<tr></tr>");
-            ["#", "Title", "Album", "Duration", ""].forEach(text => {
+            ["Song", "Artist", "Album", ""].forEach(text => {
                 header.append($("<th></th>").text(text));
             });
             table.append(header);
 
             // Create rows
-            data.forEach((value, index) => {
-                const row = $("<tr class='song-row'></tr>");
-                
-                // Index column
-                row.append($(`<td>${index + 1}</td>`));
-                
-                // Title column with image
-                const titleCell = $("<td></td>");
-                const songInfo = $("<div class='song-info'></div>");
-                songInfo.append(`<img class='song-image' src='${value.ImageURL || '/static/images/default-album.jpg'}' alt='${value.Name}'>`);
-                const songDetails = $("<div class='song-details'></div>");
-                songDetails.append(`<div class='song-name'>${value.Name}</div>`);
-                songDetails.append(`<div class='song-artist'>${value.Artist}</div>`);
-                songInfo.append(songDetails);
-                titleCell.append(songInfo);
-                row.append(titleCell);
-                
-                // Album column
+            data.forEach(value => {
+                const row = $("<tr></tr>");
+                row.append($("<td></td>").text(value.Name));
+                row.append($("<td></td>").text(value.Artist));
                 row.append($("<td></td>").text(value.Album));
                 
-                // Duration column
-                row.append($("<td class='duration'></td>").text(value.Duration || ""));
-                
-                // Play button column
+                // Add play button cell with icon
                 const playButtonCell = $("<td></td>");
                 const playButton = $("<button class='play-button'><i class='fas fa-play'></i></button>");
                 
-                playButton.click(function(e) {
-                    e.stopPropagation();
+                playButton.click(function() {
+                    // Update all play buttons to show play icon
                     $('.play-button i').removeClass('fa-pause').addClass('fa-play');
+                    // Change clicked button to pause icon
                     $(this).find('i').removeClass('fa-play').addClass('fa-pause');
                     playSong(value.Name, value.Artist, value.SpotifyURL);
                 });
                 
                 playButtonCell.append(playButton);
                 row.append(playButtonCell);
-                
                 table.append(row);
             });
 
             resultArea.append(table);
         }
 
-        function playAllSongs() {
-            // Implement play all functionality
-            const firstSong = $('.song-row').first();
-            if (firstSong.length) {
-                firstSong.click();
-            }
-        }
-
-        // Add this function to update the mood UI
-        function updateMoodUI(emotion) {
-            const moodTitle = document.getElementById('moodTitle');
-            const moodDescription = document.getElementById('moodDescription');
-            const moodImage = document.getElementById('moodImage');
-            
-            const moodMap = {
-                'Happy': 'Happy Vibes',
-                'Sad': 'Melancholic Moments',
-                'Angry': 'Power Beats',
-                'Fearful': 'Calming Tunes',
-                'Surprised': 'Exciting Rhythms',
-                'Neutral': 'Balanced Beats',
-                'Disgusted': 'Mood Shifters'
-            };
-            
-            moodTitle.textContent = moodMap[emotion] || `${emotion} Mood`;
-            moodDescription.textContent = `Songs recommended for your ${emotion.toLowerCase()} mood`;
-            moodImage.src = `/static/images/moods/${emotion.toLowerCase()}.jpg`;
+        // Add this to handle play/pause icon toggling
+        function updatePlayButton(songName) {
+            $('.play-button i').removeClass('fa-pause').addClass('fa-play');
+            $(`.songs-table tr`).each(function() {
+                if ($(this).find('td:first').text() === songName) {
+                    $(this).find('.play-button i').removeClass('fa-play').addClass('fa-pause');
+                }
+            });
         }
 
         // Add this helper function to validate Spotify URLs
@@ -602,24 +461,6 @@
                     console.error("Error fetching songs for emotion:", error);
                 });
         }
-
-        // Initialize the mood mapping
-        const moodMap = {
-            'Happy': 'Happy Vibes',
-            'Sad': 'Melancholic Moments',
-            'Angry': 'Power Beats',
-            'Fearful': 'Calming Tunes',
-            'Surprised': 'Exciting Rhythms',
-            'Neutral': 'Balanced Beats',
-            'Disgusted': 'Mood Shifters'
-        };
-
-        // Initialize with neutral mood
-        document.addEventListener('DOMContentLoaded', function() {
-            updateMoodUI('Neutral');
-            // Fetch initial neutral songs if available
-            updateSongsForEmotion('neutral');
-        });
     </script>
 </body>
 </html>
